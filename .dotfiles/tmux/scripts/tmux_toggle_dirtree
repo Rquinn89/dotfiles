@@ -1,0 +1,13 @@
+# Enable toggle file tree
+P=$(tmux show -wqv @dirtreepane)
+if [ -n "$P" ] && tmux lsp -F'#{pane_id}'|grep -q ^$P; then
+    tmux killp -t$P
+    tmux set -wu @dirtreepane
+else
+#    pid=$(tmux list-panes -a -F "#{pane_pid} #{pane_id}" | grep $TMUX_PANE | awk '{print $1}')
+#   echo $pid
+#   dir=$("lsof -d cwd | grep ${pid} | awk '{print $NF}'")
+    #P=$(tmux splitw -bhf -l 30 -PF'#{pane_id}' -- ranger $dir)
+    P=$(tmux splitw -bhf -l 30 -PF'#{pane_id}' -c '#{pane_current_path}' -- ranger)
+    tmux set -w @dirtreepane "$P"
+fi

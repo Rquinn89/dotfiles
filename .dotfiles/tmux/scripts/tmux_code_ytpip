@@ -1,0 +1,9 @@
+# Set a convinent three pane workspace that perfectly places a youtube
+# PIP window in the top right pane
+tmux new-session \; split-window -h \;\
+                   clock-mode\;\
+                   split-window -v -l 28\;
+
+
+
+
