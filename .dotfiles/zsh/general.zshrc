@@ -29,12 +29,3 @@ else
     start_agent;
 fi
 
-#### PATH Settings ####
-# Add mosh-server so I can connect
-export PATH=/opt/homebrew/bin/mosh-server:$PATH
-
-# Storing my own scripts in ~/bin for now
-export PATH=~/bin/:$PATH
-
-# Add .NET core for MS VSCode
-export PATH=/usr/local/share/dotnet:$PATH
