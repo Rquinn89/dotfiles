@@ -1,0 +1,6 @@
+mv .zshrc ~
+mv .vimrc ~
+mv .tmux.conf ~
+mv .tmux ~
+mv .vim ~
+mv .dotfiles ~

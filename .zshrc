@@ -4,4 +4,4 @@ source ~/.dotfiles/zsh/aliases.zshrc
 source ~/.dotfiles/zsh/custom_functions.zshrc
 
 #MacOS only options
-source ~/.dotfiles/zsh/macos.zshrc
+#source ~/.dotfiles/zsh/macos.zshrc
