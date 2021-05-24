@@ -7,8 +7,34 @@ export PROMPT="%n..%F{75}%1d/%f $ "
 # Fuzzy finder
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# Start SSH agent on login...
+SSH_ENV="$HOME/.ssh/agent-environment"
+
+function start_agent {
+    /usr/bin/ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
+    chmod 600 "${SSH_ENV}"
+    . "${SSH_ENV}" > /dev/null
+    /usr/bin/ssh-add;
+}
+
+# Source SSH settings, if applicable
+
+if [ -f "${SSH_ENV}" ]; then
+    . "${SSH_ENV}" > /dev/null
+    #ps ${SSH_AGENT_PID} doesn't work under cywgin
+    ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
+        start_agent;
+    }
+else
+    start_agent;
+fi
+
 #### PATH Settings ####
 # Add mosh-server so I can connect
 export PATH=/opt/homebrew/bin/mosh-server:$PATH
+
+# Storing my own scripts in ~/bin for now
+export PATH=~/bin/:$PATH
+
 # Add .NET core for MS VSCode
 export PATH=/usr/local/share/dotnet:$PATH

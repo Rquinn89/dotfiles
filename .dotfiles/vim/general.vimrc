@@ -1,5 +1,9 @@
 " General settings for vim 
 
+" Set up tags to look in parent directoryj
+set tags=tags;/
+" Set up tags for Rust
+autocmd BufRead *.rs :setlocal tags=./rusty-tags.vi;/
 
 """ INDENT SETTINGS """"
 " Indent options
@@ -18,6 +22,9 @@ set autoindent
 " Window split locations
 set splitbelow " Open new splits below
 set splitright " Or open them to the right
+
+""" PATH SETTINGS """
+set autochdir
 
 """ PLUGIN-REQUIRED SETTINGS """"
 
