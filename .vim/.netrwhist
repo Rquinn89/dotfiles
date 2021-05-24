@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =9
+let g:netrw_dirhist_9='/Users/rquinn/Projects/dotfiles'
+let g:netrw_dirhist_8='/Users/rquinn/Projects/LBRecord/LBRecord/libs/external/capture'
+let g:netrw_dirhist_7='/Users/rquinn/Projects/LBRecord/LBRecord/tools'
+let g:netrw_dirhist_6='/Users/rquinn/Projects/LBRecord/external/precompiled'
+let g:netrw_dirhist_5='/Users/rquinn/Projects/LBRecord/external'
+let g:netrw_dirhist_4='/Users/rquinn/Projects/LBRecord/src/capture'
+let g:netrw_dirhist_3='/Users/rquinn/Projects/LBRecord/libs'
+let g:netrw_dirhist_2='/Users/rquinn/Projects/LBRecord/build'
+let g:netrw_dirhist_1='/usr/local/etc/wireguard'
+let g:netrw_dirhist_0='/Users/rquinn/Projects/LBRecord/src/exec'
