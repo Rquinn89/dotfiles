@@ -8,7 +8,9 @@ export PROMPT="%n..%F{75}%1d/%f $ "
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Start SSH agent on login...
+if [[ - f '${MAC}' ]]; then
 SSH_ENV="$HOME/.ssh/agent-environment"
+fi
 
 function start_agent {
     /usr/bin/ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
