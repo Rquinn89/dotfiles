@@ -14,6 +14,6 @@ plugins=(
     zsh-256color
 )
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/rquinn/.oh-my-zsh"
+export ZSH="~/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
 #### End set by oh-my-zsh ####

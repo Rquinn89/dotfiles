@@ -4,13 +4,16 @@ bindkey -v
 # Nice prompt. Show hostname, short elipsis, and then working directory
 export PROMPT="%n..%F{75}%1d/%f $ "
 
+
+
 # Fuzzy finder
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# Start SSH agent on login...
-if [[ - f '${MAC}' ]]; then
+# Start SSH agent on login, and set docker up to use it...
+if [[ ${MAC} ]]; then
 SSH_ENV="$HOME/.ssh/agent-environment"
 fi
+
 
 function start_agent {
     /usr/bin/ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
