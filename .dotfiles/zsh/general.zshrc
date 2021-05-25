@@ -2,7 +2,11 @@
 bindkey -v
 
 # Nice prompt. Show hostname, short elipsis, and then working directory
-export PROMPT="%n..%F{75}%1d/%f $ "
+if [[ ${MAC} ]]; then
+    export PROMPT="%n..%F{75}%1d/%f $ "
+else
+    export PS1="%n..%F{75}%1d/%f $ "
+fi
 
 
 
@@ -11,7 +15,7 @@ export PROMPT="%n..%F{75}%1d/%f $ "
 
 # Start SSH agent on login, and set docker up to use it...
 if [[ ${MAC} ]]; then
-SSH_ENV="$HOME/.ssh/agent-environment"
+    SSH_ENV="$HOME/.ssh/agent-environment"
 fi
 
 
