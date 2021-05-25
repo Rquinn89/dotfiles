@@ -11,7 +11,7 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(
     git
     git-prompt
-    zsh-256color
+#    zsh-256color
 )
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
