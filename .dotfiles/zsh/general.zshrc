@@ -1,11 +1,20 @@
+export TERM=tmux-256color
 # Enable vim mode in zsh
 bindkey -v
 
+#### ENVIRONMENT VARS ####
 # Nice prompt. Show hostname, short elipsis, and then working directory
 if [[ ${MAC} ]]; then
     export PROMPT="%n..%F{75}%1d/%f $ "
 else
     export PS1="%n..%F{75}%1d/%f $ "
+fi
+
+if [[ ${MAC} ]]; then
+   # Don't let pip install things globally
+    export PIP_REQUIRE_VIRTUALEN=true
+
+    ~/.addPATH
 fi
 
 # Fuzzy finder

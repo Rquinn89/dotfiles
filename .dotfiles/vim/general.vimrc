@@ -7,15 +7,12 @@ autocmd BufRead *.rs :setlocal tags=./rusty-tags.vi;/
 
 """ INDENT SETTINGS """"
 " Indent options
-set tabstop=4
-set shiftwidth=4
+set tabstop=3
+set shiftwidth=3
 set expandtab
 set autoindent
 
 " Automatically set indent per file type
- filetype on
- filetype plugin on
- filetype indent on
 
  
 """ WINDOW/TAB SETTINGS """"

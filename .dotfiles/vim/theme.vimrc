@@ -1,7 +1,6 @@
 " Theme  / color / appearance vim settings
 
 
-
 " Set an absolute line number on my curent line
 " And a relative one relative to my current line
 " For easier movement

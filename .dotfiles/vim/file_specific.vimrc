@@ -13,3 +13,9 @@ augroup zshrc_hl
   au!
   autocmd BufNewFile,BufRead *.zshrc set syntax=zsh
 augroup END
+
+" Syntax highlight XX.zshrc files as .zshrc
+augroup mkfile_tab
+  au!
+  autocmd BufNewFile,BufRead Makefile set noexpandtab
+augroup END
